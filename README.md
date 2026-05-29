@@ -75,17 +75,17 @@ chmod a+x install.sh
 mkdir weights
 cd ./weights
 git lfs install
-git clone https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt-1-1
+git clone git@hf.co:stabilityai/stable-video-diffusion-img2vid-xt-1-1.git
 ```
 
 #### 2. Download the [DepthCrafter model](https://huggingface.co/tencent/DepthCrafter) for the video depth estimation.
 ```bash
-git clone https://huggingface.co/tencent/DepthCrafter
+git clone git@hf.co:tencent/DepthCrafter.git
 ```
 
 #### 3. Download the [StereoCrafter model](https://huggingface.co/TencentARC/StereoCrafter) for the stereo video generation.
 ```bash
-git clone https://huggingface.co/TencentARC/StereoCrafter
+git clone git@hf.co:TencentARC/StereoCrafter.git
 ```
 
 
