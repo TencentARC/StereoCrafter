@@ -57,7 +57,6 @@ cd StereoCrafter
 pip install -r requirements.txt
 ```
 
-
 #### 4. Install customized 'Forward-Warp' package for forward splatting
 ```
 cd ./dependency/Forward-Warp
@@ -65,6 +64,26 @@ chmod a+x install.sh
 ./install.sh
 ```
 
+## 🛠️ Installation with Docker
+
+#### 1. Set up the environment
+Docker will run the code on Python 3.8 and Cuda 11.8.
+You need to install Docker with CUDA support first.
+
+#### 2. Clone the repo
+```bash
+# use --recursive to clone the dependent submodules
+git clone --recursive https://github.com/TencentARC/StereoCrafter
+cd StereoCrafter
+```
+
+#### 3. Download models
+Please refer to "📦 Model Weights" for downloading the models.
+
+#### 4. Start the Docker image
+```bash
+docker compose run stereo_crafter --build --remove-orphans
+```
 
 ## 📦 Model Weights
 
@@ -72,7 +91,6 @@ chmod a+x install.sh
 
 ```bash
 # in StereoCrafter project root directory
-mkdir weights
 cd ./weights
 git lfs install
 git clone https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt-1-1

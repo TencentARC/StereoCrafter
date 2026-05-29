@@ -1,0 +1,14 @@
+services:
+  stereo_crafter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./test:/app/test
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
